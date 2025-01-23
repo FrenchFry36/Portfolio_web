@@ -74,6 +74,7 @@ nav li {
 
 a {
   text-decoration: none;
+  transition: 0.3s;
 }
 
 nav > ul a {
@@ -85,6 +86,7 @@ nav > ul a {
 
 nav > ul a:hover {
   background-color: var(--pewter-grey);
+  transition: 0.3s;
 }
 
 @media (max-width: 700px) {
@@ -293,6 +295,11 @@ img {
   color: var(--custom-white);
   margin-top: 20px;
   font-size: 2rem;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  color: var(--magenta-red);
 }
 
 #scrollToTop {
@@ -305,12 +312,14 @@ img {
   width: 50px;
   height: 50px;
   background-color: var(--simple-white);
+  transition: 0.3s;
   cursor: pointer;
 }
 
 #scrollToTop:hover {
-  background-color: var(--pewter-grey);
+  background-color: var(--magenta-red);
   color: var(--custom-white);
+  transition: 0.3s;
 }
 
 @media (max-width: 700px) {
