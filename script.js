@@ -16,17 +16,12 @@ scrollToTopButton.addEventListener("click", () => {
   });
 });
 
-// illumination feature
-const welcomeSection = document.getElementById("welcome-section");
+// Illumination feature
 const illuminationSection = document.getElementById("illumination");
 const illuminationTracker = document.getElementById("illumination-tracker");
-const spotlightImage = getComputedStyle(document.documentElement)
-  .getPropertyValue("--spotlight-image")
-  .trim();
-const spotlightDark = getComputedStyle(document.documentElement)
-  .getPropertyValue("--lead-blue")
-  .trim();
-
+const spotlightDark = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--lead-blue");
 window.addEventListener("load", () => {
   illuminationSection.style.backgroundColor = spotlightDark;
 });
@@ -36,8 +31,6 @@ illuminationTracker.addEventListener("mousemove", (e) => {
   const rect = illuminationSection.getBoundingClientRect();
   const x = e.clientX - rect.left; // X position within the element
   const y = e.clientY - rect.top; // Y position within the element
-
-  // Update the background gradient position
 
   illuminationSection.style.backgroundImage = `
     radial-gradient(circle at ${x}px ${y}px, transparent 100px, ${spotlightDark} 250px)

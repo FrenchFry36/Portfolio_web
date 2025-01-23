@@ -128,17 +128,7 @@ nav > ul a:hover {
   align-items: center;
   position: relative;
   overflow: hidden; /* Prevent overflow caused by gradients */
-  /* background-repeat: no-repeat;
-  transition: background 0.2s ease-out; */
 }
-
-/* #welcome-section:hover {
-  background-image: radial-gradient(
-    circle at 50% 50%,
-    var(--spotlight-image) 100px,
-    var(--lead-blue) 250px
-  );
-} */
 
 .text {
   display: flex;
