@@ -12,6 +12,7 @@
   --lead-blue: #1a1a1d;
   --aegean-blue: #22576f;
   --fire-orange: #ff7f50;
+  --spotlight-image: url("imgs/scrnsht.png");
 }
 
 html {
@@ -34,7 +35,7 @@ body {
   padding: 0 30px;
   box-shadow: 0 2px 2px var(--pewter-grey);
   position: absolute;
-
+  z-index: 30;
   width: 100%;
 }
 
@@ -103,19 +104,47 @@ nav > ul a:hover {
 
 /* WELCOME SECTION */
 
+#illumination {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+}
+
+#illumination-tracker {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 20;
+}
+
 #welcome-section {
-  background-color: var(--lead-blue);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("imgs/scrnsht.png");
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden; /* Prevent overflow caused by gradients */
+  /* background-repeat: no-repeat;
+  transition: background 0.2s ease-out; */
 }
+
+/* #welcome-section:hover {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    var(--spotlight-image) 100px,
+    var(--lead-blue) 250px
+  );
+} */
 
 .text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 15; /* Ensure text is above the gradient effect */
 }
 
 h1 {
