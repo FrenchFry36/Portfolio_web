@@ -14,6 +14,10 @@
   --fire-orange: #ff7f50;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--magenta-red);
@@ -289,6 +293,24 @@ img {
   color: var(--custom-white);
   margin-top: 20px;
   font-size: 2rem;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  width: 50px;
+  height: 50px;
+  background-color: var(--simple-white);
+  cursor: pointer;
+}
+
+#scrollToTop:hover {
+  background-color: var(--pewter-grey);
+  color: var(--custom-white);
 }
 
 @media (max-width: 700px) {
